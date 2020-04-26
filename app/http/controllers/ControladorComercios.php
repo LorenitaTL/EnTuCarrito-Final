@@ -11,6 +11,9 @@ class ControladorComercios extends Controller{
     public function formCrearComercio(){
         return $this->view("comercios/registrarComercio");
     }
+    public function listarComerciosView(){
+        return $this->view("comercios/listarComercios");
+    }
 
     public function insertarComercio(Request $request){
         $comercioModel = new Comercios();

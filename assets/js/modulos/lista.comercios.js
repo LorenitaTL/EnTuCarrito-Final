@@ -51,13 +51,11 @@ var vista = {
                         +'<td>'+ obj.nombre +'</td>'
                         +'<td>'+ obj.direccion +'</td>'
                         +'<td>'+ obj.categoria +'</td>'
+                        +'<td>'+ obj.descripcion +'</td>'
                         +'<td>'+ obj.horario +'</td>'
                         +'<td>'+ obj.telefono_1 +'</td>'
-                        +'<td>'
-                        +'<a href="javascript:;" class="btn-accion editar">Editar</a>'
-                        +'|'
-                        +'<a href="javascript:;" class="btn-accion eliminar">Eliminar</a>'
-                        +'</td>'
+                        +'<td>'+ obj.telefono_2 +'</td>'
+                        +'<td>'+ obj.disponibilidad +'</td>'
                         +'</tr>';
             },
             consultando: function (){

@@ -17,7 +17,7 @@
             </div>
             <div class="card-body">
                 <div class="btn-group">
-                    <a href="<?= URL::base()?>">Listar comercios</a>
+                    <a href="<?= URL::to('listar_comercios/jerez')?>">Listar comercios</a>
                 </div>
                 <hr />
                 <h4 class="card-title mb-4">Agregar nuevo comercio</h4>
@@ -32,19 +32,23 @@
                         </div>
                         <div class="form-group">
                             <label for="horario">Horario:</label>
-                            <input type="text" class="form-control" id="horario" name="horario" />
+                            <input type="text" class="form-control" id="horario" name="horario" required="required"/>
                         </div>
                         <div class="form-group">
                             <label for="categoria">Categoria:</label>
                             <input type="text" class="form-control" id="categoria" name="categoria" />
                         </div>
                         <div class="form-group">
+                            <label for="descripcion">Descripción:</label>
+                            <textarea class="form-control" id="descripcion" name="descripcion" ></textarea>
+                        </div>
+                        <div class="form-group">
                             <label for="telefono_1">Telefono 1 (*):</label>
-                            <input type="number" class="form-control" id="telefono_1" name="telefono_1" required="required" />
+                            <input type="text" class="form-control" id="telefono_1" name="telefono_1"  />
                         </div>
                         <div class="form-group">
                             <label for="telefono_2">Telefono 2 (*):</label>
-                            <input type="email" class="form-control" id="telefono_2" name="telefono_2" required="required" />
+                            <input type="text" class="form-control" id="telefono_2" name="telefono_2"  />
                         </div>
                         <div class="form-group">
                             <label for="disponibilidad">Disponibilidad:</label>
