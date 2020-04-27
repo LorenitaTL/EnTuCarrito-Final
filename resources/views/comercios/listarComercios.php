@@ -26,7 +26,20 @@
 
     .inpt {
       background: none;
-      border: 0;
+      border: 2px solid rgb(255, 190, 0);
+      outline: 0;
+      border-radius: 30px;
+    }
+
+    .inpt input {
+      background: none;
+      border: none;
+      outline: 0;
+    }
+
+    .inpt span {
+      background: none;
+      border: none;
       outline: 0;
     }
 
@@ -41,114 +54,111 @@
 </head>
 
 <body data-urlbase="<?= URL::base() ?>">
-<div class="container-fluid bg-nav">
-    <div class="container pt-1">
+
+
+  <div class="container-fluid ">
+    <div class="container">
       <div class="row">
-        <div class="col-2 ">
-          <img src="https://image.freepik.com/vector-gratis/fondo-plantilla-logo_1390-55.jpg" height="50" alt="">
+        <div class="col-lg-2 col-md-2 col-sm-12 align-items-center">
+          <img src="<?= URL::to("assets/images/EnTuCarritoLogo.png") ?>" height="100" alt="">
         </div>
-        <div class="col-10  bg-input">
-          <form action="">
-            <div class="row">
-              <input class="form-control focused-input inpt col-11" id="search" type="text" placeholder="Buscar...">
-              <button class="btn focused-input" type="submit"><i class="fas fa-search"></i></button>
+        <div class="col-lg-10 col-md-10 col-sm-12 align-items-center">
+        <div class="input-group mb-3 mt-3 inpt">
+            <input type="text" class="form-control " placeholder="Buscar comercio..." name="search" id="search">
+            <div class="input-group-prepend">
+              <span class="input-group-text inpt"><i class="fas fa-search"></i></span>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-
     </div>
 
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-nav sticky-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  </div>
+  <div class="container-fluid bg-nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav sticky-top">
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button>-->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <!--<ul class="navbar-nav ">
             <li class="nav-item active">
-              <a class="nav-link small text-uppercase" href="#">Todos <span class="sr-only">(current)</span></a>
+              <a class="nav-link text-uppercase" href="#">Todos <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link small text-uppercase" href="#">Categoría 1 <span class="sr-only">(current)</span></a>
+              <a class="nav-link text-uppercase" href="#">Categoría 1 <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link small text-uppercase" href="#">Categoría 2</a>
+              <a class="nav-link text-uppercase" href="#">Categoría 2</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link small text-uppercase" href="#">Categoría 3</a>
+              <a class="nav-link text-uppercase  href="#">Categoría 3</a>
             </li>
-          </ul>
+          </ul>-->
         </div>
       </nav>
-    </div>
   </div>
   <div class="container">
-  <div class="row">
-        <div class="col-md-4">
-            <!--<input type="text" id="search" class="form-control" placeholder="Search product by name or sku">-->
+    <!--<div class="row">
+      <div class="col-md-4">
+        <!--<input type="text" id="search" class="form-control" placeholder="Search product by name or sku">-->
+     <!-- </div>
+      <div class="col-md-8">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" id="all" class="btn btn-success">All</button>
+          <button type="button" id="drink" class="btn btn-success">Drink</button>
+          <button type="button" id="food" class="btn btn-success">Food</button>
+          <button type="button" id="c" class="btn btn-success">C</button>
         </div>
-        <div class="col-md-8">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" id="all" class="btn btn-success">All</button>
-                <button type="button" id="drink" class="btn btn-success">Drink</button>
-                <button type="button" id="food" class="btn btn-success">Food</button>
-                <button type="button" id="c" class="btn btn-success">C</button>
-            </div>
-        </div>
+      </div>
     </div>
     <hr>
     <div class="row" id="parent">
-        <div class="col-md-2 box drink">
-            <center>
-                <img src="http://via.placeholder.com/80x80" class="" alt="">
-                <p class="name">Pepsi </p>
-                <p class="sku">D-1251</p>
-                <p>$ 2,410</p>
-            </center>
-        </div>
-        <div class="col-md-2 box drink">
-            <center>
-                <img src="http://via.placeholder.com/80x80" class="" alt="">
-                <p class="name">Cocacola </p>
-                <p class="sku">D-1314</p>
-                <p>$ 2,410</p>
-            </center>
-        </div>
+      <div class="col-md-2 box drink">
+        <center>
+          <img src="http://via.placeholder.com/80x80" class="" alt="">
+          <p class="name">Pepsi </p>
+          <p class="sku">D-1251</p>
+          <p>$ 2,410</p>
+        </center>
+      </div>
+      <div class="col-md-2 box drink">
+        <center>
+          <img src="http://via.placeholder.com/80x80" class="" alt="">
+          <p class="name">Cocacola </p>
+          <p class="sku">D-1314</p>
+          <p>$ 2,410</p>
+        </center>
+      </div>
 
-        <div class="col-md-2 box drink">
-            <center>
-                <img src="http://via.placeholder.com/80x80" class="" alt="">
-                <p class="name">Mountien Dwe </p>
-                <p class="sku">D-458</p>
-                <p>$ 2,410</p>
-            </center>
-        </div>
-
-
-        <div class="col-md-2 box food">
-            <center>
-                <img src="http://via.placeholder.com/80x80" class="" alt="">
-                <p class="name">Burger </p>
-                <p class="sku">F-125</p>
-                <p>$ 2,410</p>
-            </center>
-        </div>
-
-        <div class="col-md-2 box food">
-                <center>
-                    <img src="http://via.placeholder.com/80x80" class="" alt="">
-                    <p class="name">Hot Dog </p>
-                    <p class="sku">F-7412</p>
-                    <p>$ 2,410</p>
-                </center>
-            </div>
+      <div class="col-md-2 box drink">
+        <center>
+          <img src="http://via.placeholder.com/80x80" class="" alt="">
+          <p class="name">Mountien Dwe </p>
+          <p class="sku">D-458</p>
+          <p>$ 2,410</p>
+        </center>
+      </div>
 
 
+      <div class="col-md-2 box food">
+        <center>
+          <img src="http://via.placeholder.com/80x80" class="" alt="">
+          <p class="name">Burger </p>
+          <p class="sku">F-125</p>
+          <p>$ 2,410</p>
+        </center>
+      </div>
 
-    </div>
+      <div class="col-md-2 box food">
+        <center>
+          <img src="http://via.placeholder.com/80x80" class="" alt="">
+          <p class="name">Hot Dog </p>
+          <p class="sku">F-7412</p>
+          <p>$ 2,410</p>
+        </center>
+      </div>
+    </div>-->
     <section id="comercios" class="mt-4 mb-4">
       <div class="container align-items-center">
         <div class="row">
@@ -159,8 +169,9 @@
             <small class="font-italic">*Estamos trabajando en mejorar la visualización de los comercios</small>
           </div>
         </div>
-        <a href="<?= URL::to("comercios/form/crear") ?>" class="btn btn-primary">Crear comercio</a>
+        <!--<a href="<?= URL::to("comercios/form/crear") ?>" class="btn btn-primary">Crear comercio</a>-->
         <div class="row pb-4 pt-4" id="prueba">
+          
         </div>
 
       </div>
@@ -168,9 +179,9 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    var $btns = $('.btn').click(function() {
+  <script>
+    $(document).ready(function() {
+      var $btns = $('.btn').click(function() {
         if (this.id == 'all') {
           $('#parent > div').fadeIn(450);
         } else {
@@ -180,16 +191,20 @@ $(document).ready(function(){
         $btns.removeClass('active');
         $(this).addClass('active');
       })
-    
-    var $search = $("#search").on('input',function(){
+
+      var $search = $("#search").on('input', function() {
         $btns.removeClass('active');
         var matcher = new RegExp($(this).val(), 'gi');
-        $('.box').show().not(function(){
-            return matcher.test($(this).find('.name, .sku').text())
+        $('.box').show().not(function() {
+          return matcher.test($(this).find('.name, .sku').text())
         }).hide();
+      })
+
+      $("btn-hide").click(function(){
+    $("p").toggle();
+  });
     })
-})
-</script>
+  </script>
   <script src="<?= URL::to("assets/plugins/jquery.js") ?>" type="text/javascript"></script>
   <script src="<?= URL::to("assets/bootstrap/js/bootstrap.min.js") ?>" type="text/javascript"></script>
   <script src="<?= URL::to("assets/js/global/helperForm.js") ?>" type="text/javascript"></script>

@@ -1,6 +1,6 @@
 var vista = {
     controles: {
-        tbodyListaComercios: $('#prueba ')
+        tbodyListaComercios: $('#tablaListaComercios tbody')
     },
     init: function () {
         vista.eventos();
@@ -47,29 +47,7 @@ var vista = {
     utils:{
         templates:{
             item: function(obj){
-                return '<div class="col col-lg-4 col-md-6 col-sm-12 pb-3 pt-3 pb-3 box">'
-                +'<div class="card pb-3" >'
-                +'<img src="https://newwweb.com.mx/sites/default/files/2017-11/ecommerce-site.png" class="card-img-top" alt="...">'
-                +'<div class="card-body ">'
-                +'<h4 class="name">'+obj.nombre+'</h4>'
-                +'<div class="badges">'
-                +'<h5><span class="badge badge-success">Categoría: '+obj.categoria+'</span></h5>'
-                +'<h5><span class="badge badge-info">Horario: '+obj.horario+'</span></h5>'
-                +'</div>'
-                +'<p class="card-text">'+obj.descripcion+'</p>'
-                +'<a href="" class="" data-toggle="collapse" data-target="#detalles'+obj.id_comercio+'">Mostrar/Ocultar detalles</a>'
-                +'<div id="detalles'+obj.id_comercio+'" class="collapse">'
-                +'<hr>'
-                +'<h6>Teléfono: <small>'+obj.telefono_1+'</small></h6>'
-                +'<h6>Teléfono 2: <small>'+obj.telefono_2+'</small></h6>'
-                +'<h6>Disponibilidad: <small>'+obj.disponibilidad+'</small></h6>'
-                +'<h6>Direccion: <small>'+obj.direccion+'</small></h6>'
-                +'</div>'
-                +'</div>'
-                +'</div>'
-                +'</div>';
-                
-                /*return '<tr>'
+                return '<tr>'
                         +'<td>'+ obj.nombre +'</td>'
                         +'<td>'+ obj.direccion +'</td>'
                         +'<td>'+ obj.categoria +'</td>'
@@ -78,7 +56,7 @@ var vista = {
                         +'<td>'+ obj.telefono_1 +'</td>'
                         +'<td>'+ obj.telefono_2 +'</td>'
                         +'<td>'+ obj.disponibilidad +'</td>'
-                        +'</tr>';*/
+                        +'</tr>';
             },
             consultando: function (){
                 return '<tr><td colspan="6">Consultando...</td></tr>'
