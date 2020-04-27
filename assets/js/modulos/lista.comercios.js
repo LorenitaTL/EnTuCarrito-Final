@@ -1,6 +1,6 @@
 var vista = {
     controles: {
-        tbodyListaComercios: $('#tablaListaComercios tbody')
+        tbodyListaComercios: $('#prueba ')
     },
     init: function () {
         vista.eventos();
@@ -47,7 +47,22 @@ var vista = {
     utils:{
         templates:{
             item: function(obj){
-                return '<tr>'
+                return '<div class="col pb-3 pt-3 pb-3 box">'
+                +'<div class="card pb-3 align-items-center" style="width: 18rem;">'
+                +'<img src="https://newwweb.com.mx/sites/default/files/2017-11/ecommerce-site.png" class="card-img-top" alt="...">'
+                +'<div class="card-body">'
+                +'<h5 class="name">'+obj.nombre+'</h5>'
+                +'<div class="badges">'
+                +'<span class="badge badge-success">'+obj.categoria+'</span>'
+                +'<span class="badge badge-info">'+obj.horario+'</span>'
+                +'</div>'
+                +'<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cupiditate expedita reprehenderit rerum sunt...</p>'
+                +'<a href="#" target="_blank" class="btn btn-primary">Ver Detalles</a>'
+                +'</div>'
+                +'</div>'
+                +'</div>';
+                
+                /*return '<tr>'
                         +'<td>'+ obj.nombre +'</td>'
                         +'<td>'+ obj.direccion +'</td>'
                         +'<td>'+ obj.categoria +'</td>'
@@ -56,7 +71,7 @@ var vista = {
                         +'<td>'+ obj.telefono_1 +'</td>'
                         +'<td>'+ obj.telefono_2 +'</td>'
                         +'<td>'+ obj.disponibilidad +'</td>'
-                        +'</tr>';
+                        +'</tr>';*/
             },
             consultando: function (){
                 return '<tr><td colspan="6">Consultando...</td></tr>'
