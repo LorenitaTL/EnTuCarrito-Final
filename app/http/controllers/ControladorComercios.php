@@ -26,9 +26,9 @@ class ControladorComercios extends Controller{
         }
         $id = $comercioModel->insert($request->all());
         $v = ($id>0);
-        $respuesta = new Respuesta($v ? EMensajes::INSERCION_EXITOSA : EMensajes::ERROR_INSERSION);
+        $respuesta = new Respuesta($v ? EMensajes::INSERCION_EXITOSA : EMensajes::ERROR_INSERCION);
         $respuesta->setDatos($id);
-        return $respuesta;        
+        return $respuesta;      
     }
     public function listarComercios(){
         $comercioModel = new Comercios();

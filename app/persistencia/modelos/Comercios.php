@@ -9,6 +9,7 @@ class Comercios extends ModeloGenerico{
     protected $horario;
     protected $categoria;
     protected $direccion;
+    protected $descripcion;
 
     public function __construct($propiedades = null)
     {
@@ -77,6 +78,14 @@ class Comercios extends ModeloGenerico{
 
 	public function setDireccion($direccion){
 		$this->direccion = $direccion;
+	}
+	
+	public function getDescripcion(){
+		return $this->descripcion;
+	}
+
+	public function setDescripcion($descripcion){
+		$this->descripcion = $descripcion;
 	}
 
 
