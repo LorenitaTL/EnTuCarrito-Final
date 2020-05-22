@@ -87,9 +87,5 @@ class Comercios extends ModeloGenerico{
 	public function setDescripcion($descripcion){
 		$this->descripcion = $descripcion;
 	}
-
-
-
-
 }
 ?>

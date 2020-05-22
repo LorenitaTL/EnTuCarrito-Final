@@ -8,7 +8,7 @@ class EMensajes
     const INSERCION_EXITOSA = "INSERSION_EXITOSA";
     const ACTUALIZACION_EXITOSA = "ACTUALIZACION_EXITOSA";
     const ELIMINACION_EXITOSA = "ELIMINACION_EXITOSA";
-    const ERROR_INSERCION = "ERROR_INSERCION";
+    const ERROR_INSERSION = "ERROR_INSERSION";
     const ERROR_ACTUALIZACION = "ERROR_ACTUALIZACION";
     const ERROR_ELIMINACION = "ERROR_ELIMINACION";
     const NO_HAY_REGISTROS = "NO_HAY_REGISTROS";
@@ -25,7 +25,7 @@ class EMensajes
                 return new Respuesta(1, "Se ha actualizado el registro con éxito.");
             case EMensajes::ELIMINACION_EXITOSA:
                 return new Respuesta(1, "Se ha eliminado el registro con éxito.");
-            case EMensajes::ERROR_INSERCION:
+            case EMensajes::ERROR_INSERSION:
                 return new Respuesta(-1, "Se ha producido un error al insertar el registro.");
             case EMensajes::ERROR:
                 return new Respuesta(-1, "Se ha producido un error al realizar la operación.");

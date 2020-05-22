@@ -1,7 +1,7 @@
 <?php
 class Conexion{
     private $conexion;
-    private $configuracion =[
+   private $configuracion =[
         "driver"=>"mysql",
         "host"=>"localhost",
         "database"=>"entucarrito",

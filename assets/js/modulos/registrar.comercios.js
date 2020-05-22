@@ -41,10 +41,21 @@ var vista = {
             finalizado: function (respuesta) {
                 if (__app.validarRespuesta(respuesta)) {
                     vista.controles.formComercio.find('input').val('');
-                    swal('Correcto', 'Se ha registrado correctamente el comercio', 'success');
+                    vista.controles.formComercio.find('textarea').val('');
+                    //swal('Correcto', 'Se ha registrado correctamente el comercio', 'success');
+                    swal({ title: 'Correcto', text: 'Se ha registrado correctamente el comercio', type: "success" },
+                    function () {
+                        location.reload();
+                    }
+                );
                     return;
                 }
-                swal('Error', respuesta.mensaje, 'error');
+                //swal('Error', respuesta.mensaje, 'error');
+                swal({ title: 'Error', text: respuesta.mensaje, type: "error" },
+                    function () {
+                        location.reload();
+                    }
+                );
             },
 
             beforeSendCat: function () {
@@ -56,10 +67,20 @@ var vista = {
             finalizadoCat: function (respuesta) {
                 if (__app.validarRespuesta(respuesta)) {
                     vista.controles.formCategoria.find('input').val('');
-                    swal('Correcto', 'Se ha registrado correctamente la categoria', 'success');
+                    //swal('Correcto', 'Se ha registrado correctamente la categoria', 'success');
+                    swal({ title: 'Correcto', text: 'Se ha registrado correctamente la categoria', type: "success" },
+                        function () {
+                            location.reload();
+                        }
+                    );
                     return;
                 }
-                swal('Error', respuesta.mensaje, 'error');
+                //swal('Error', respuesta.mensaje, 'error');
+                swal({ title: 'Error', text: respuesta.mensaje, type: "error" },
+                    function () {
+                        location.reload();
+                    }
+                );
             },
             
             

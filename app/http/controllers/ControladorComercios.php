@@ -6,7 +6,7 @@ class ControladorComercios extends Controller{
     }
 
     public function index(){
-        return $this->view("welcome");
+        return $this->view("comercios/listarComercios");
     }
     public function formCrearComercio(){
         return $this->view("comercios/registrarComercio");
@@ -26,9 +26,9 @@ class ControladorComercios extends Controller{
         }
         $id = $comercioModel->insert($request->all());
         $v = ($id>0);
-        $respuesta = new Respuesta($v ? EMensajes::INSERCION_EXITOSA : EMensajes::ERROR_INSERCION);
+        $respuesta = new Respuesta($v ? EMensajes::INSERCION_EXITOSA : EMensajes::ERROR_INSERSION);
         $respuesta->setDatos($id);
-        return $respuesta;      
+        return $respuesta;        
     }
     public function listarComercios(){
         $comercioModel = new Comercios();

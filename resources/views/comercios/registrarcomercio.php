@@ -4,8 +4,8 @@
 $lista = $categoriaModel->get();
 ?>
 
-<head>
-    <meta charset="UTF-8">
+<head><meta charset="gb18030">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>En Tu Carrito Jerez - Comercios</title>
     <link rel="stylesheet" href="<?= URL::to("assets/bootstrap/css/bootstrap.min.css") ?>" type="text/css" />
@@ -91,12 +91,6 @@ $lista = $categoriaModel->get();
                             <label for="nombre_categoria">Nombre Categoría(*):</label>
                             <input type="text" class="form-control" id="nombre_categoria" name="nombre_categoria" required="required" />
                         </div>
-                        <div class="form-group">
-                            <label for="numero">Numero Categoría(*):</label>
-                            <input type="text" class="form-control" id="numero" name="numero" required="required" />
-                        </div>
-
-
                 </div>
                 <div class="modal-footer">
                     <div class="form-group text-right">

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>En Tu Carrito Jerez - Comercios</title>
     <link rel="stylesheet" href="<?= URL::to("assets/bootstrap/css/bootstrap.min.css") ?>" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?= URL::to("assets/images/EnTuCarritoLogo.jpg") ?>">
 </head>
 
 <body data-urlbase="<?= URL::base() ?>" class="bg-warning">
