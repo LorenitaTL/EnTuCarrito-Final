@@ -57,7 +57,6 @@ $lista = $categoriaModel->get();
       box-shadow: 0 0 2px white !important;
     }
 
-
     .simple-pagination ul {
       padding: 0 !important;
       list-style: none !important;
@@ -93,6 +92,86 @@ $lista = $categoriaModel->get();
       margin: 5px !important;
       box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.5) !important;
       transition: all 1s ease !important;
+    }
+
+    .center-img {
+      display: block;
+      height: 150px;
+      align-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-comercio {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 40%;
+      border-radius: 5px;
+    }
+
+    .card-body h5 {
+      color: grey;
+    }
+
+    .details {
+      background-color: #ffbe00 !important;
+    }
+
+    .details h4 {
+      color: antiquewhite;
+    }
+
+    .details h6 {
+      color: #fae9bb;
+    }
+
+    .detalles h6 {
+      color: #474747;
+    }
+
+    .details p {
+      color: #474747;
+    }
+
+    .flip-box {
+      background-color: transparent;
+      width: 300px;
+      height: 250px;
+
+      perspective: 1000px;
+    }
+
+    .flip-box-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-box-front,
+    .flip-box-back {
+      position: absolute;
+      width: 100%;
+      /*height: 100%;*/
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-box-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    .flip-box-back {
+      background-color: #555;
+      color: white;
+      transform: rotateY(180deg);
     }
   </style>
 </head>
@@ -157,10 +236,10 @@ $lista = $categoriaModel->get();
       </div>
     </nav>
   </div>
-  <div class="container">
+  <div class="container-fluid">
 
-    <section id="comercios" class="mt-4 mb-4">
-      <div class="container align-items-center">
+    <section id="comercios" class="">
+      <div class=" align-items-center">
         <div class="row">
           <div class="col text-center ">
             <h3 class="text-uppercase">
@@ -170,13 +249,191 @@ $lista = $categoriaModel->get();
           </div>
         </div>
         <!--<a href="<?= URL::to("comercios/form/crear") ?>" class="btn btn-primary">Crear comercio</a>-->
-        <div class="row pb-4 pt-4 list-wrapper" id="prueba">
+
+        <div class="row  list-wrapper" id="">
+          <div class="flip-box col-lg-3">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="https://i.pinimg.com/originals/59/b6/ce/59b6cedf42ec3367caa5a14df7013496.jpg" alt="Paris" style="width:300px;height:200px">
+                <h5>Nombre del comercio</h5>
+              </div>
+              <div class="flip-box-back">
+                <h2>Paris</h2>
+                <p>What an amazing city</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-box col-lg-3 ">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div><img src="https://www.dondeir.com/wp-content/uploads/2017/03/buffet-de-pizzas-en-cdmx-como-todo-que-puedas-por-149-pesos-3.jpg" alt="Paris" style="width:300px;height:200px">
+                  <h5>Nombre</h5>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <h2>Paris</h2>
+                <p>What an amazing city</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-box col-lg-3 ">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2019/06/25/15614775255199.jpg" alt="Paris" style="width:300px;height:200px">
+                <h5>Nombre del comercio</h5>
+              </div>
+              <div class="flip-box-back">
+                <h2>Paris</h2>
+                <p>What an amazing city</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quidem repellat fugiat itaque recusandae modi ex dolorum? Perferendis sapiente ipsam cupiditate? Unde, animi laboriosam. Animi debitis fugiat quos voluptate sunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi consequuntur delectus cumque porro doloribus saepe harum libero iusto adipisci doloremque, cum at itaque ut quod eaque tempora reprehenderit numquam nisi?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-box col-lg-3">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="https://blog.monouso.es/wp-content/uploads/materiales-para-una-heladeria2-1024x536.jpg" alt="Paris" style="width:300px;height:200px">
+                <h5>Nombre del comercio</h5>
+              </div>
+              <div class="flip-box-back">
+                <h2>Paris</h2>
+                <p>What an amazing city</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quidem repellat fugiat itaque recusandae modi ex dolorum? Perferendis sapiente ipsam cupiditate? Unde, animi laboriosam. Animi debitis fugiat quos voluptate sunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi consequuntur delectus cumque porro doloribus saepe harum libero iusto adipisci doloremque, cum at itaque ut quod eaque tempora reprehenderit numquam nisi?</p>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="flip-box col-lg">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="card text-white bg-primary">
+                  <img class="card-img-top" src="https://blog.monouso.es/wp-content/uploads/materiales-para-una-heladeria2-1024x536.jpg" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="flip-box-back">
+                <div class="card text-white bg-info">
+                  <img class="card-img-top" src="https://blog.monouso.es/wp-content/uploads/materiales-para-una-heladeria2-1024x536.jpg" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flip-box col-lg">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="card text-white bg-primary">
+                  <img class="card-img-top" src="https://blog.monouso.es/wp-content/uploads/materiales-para-una-heladeria2-1024x536.jpg" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="flip-box-back">
+                <div class="card text-white bg-info">
+                  <img class="card-img-top" src="https://blog.monouso.es/wp-content/uploads/materiales-para-una-heladeria2-1024x536.jpg" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Text</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+
+          <!--<div class="col-lg m-2 p-0 card shadow details">
+            <img class="card-img-top" src="https://blog.monouso.es/wp-content/uploads/materiales-para-una-heladeria2-1024x536.jpg" alt="Card image" style="width:100%; object-fit: fit;">
+            <div class="card-body ">
+              <h4 class="card-title">John Doe</h4>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Categoría: Tacos</span></h6>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Horario: 5:00 - 8:00 p.m.</span></h6>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="" class="text-light" data-toggle="collapse" data-target="#detalles2">Mostrar/Ocultar detalles</a>
+                <div id="detalles2" class="collapse detalles">
+                <hr>
+                <h6>Teléfono: <small>'+obj.telefono_1+'</small></h6>
+                <h6>Teléfono 2: <small>'+obj.telefono_2+'</small></h6>
+                <h6>Disponibilidad: <small>'+obj.disponibilidad+'</small></h6>
+                <h6>Dirección: <small>'+obj.direccion+'</small></h6>
+                </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg m-2 p-0 card shadow details">
+            <img class="card-img-top" src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2019/06/25/15614775255199.jpg" alt="Card image" style="width:100%; object-fit: fit;">
+            <div class="card-body ">
+              <h4 class="card-title">John Doe</h4>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Categoría: Tacos</span></h6>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Horario: 5:00 - 8:00 p.m.</span></h6>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+
+          <div class="col-lg m-2 p-0 card shadow details">
+            <img class="card-img-top" src="https://www.dondeir.com/wp-content/uploads/2017/03/buffet-de-pizzas-en-cdmx-como-todo-que-puedas-por-149-pesos-3.jpg" alt="Card image" style="width:100%; object-fit: fit;">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Categoría: Tacos</span></h6>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Horario: 5:00 - 8:00 p.m.</span></h6>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+
+          <div class="col-lg m-2 p-0 card shadow details">
+            <img class="card-img-top" src="https://blog.monouso.es/wp-content/uploads/materiales-para-una-heladeria2-1024x536.jpg" alt="Card image" style="width:100%; object-fit: fit;">
+            <div class="card-body ">
+              <h4 class="card-title">John Doe</h4>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Categoría: Tacos</span></h6>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Horario: 5:00 - 8:00 p.m.</span></h6>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="" class="text-light" data-toggle="collapse" data-target="#detalles2">Mostrar/Ocultar detalles</a>
+                <div id="detalles2" class="collapse detalles">
+                <hr>
+                <h6>Teléfono: <small>'+obj.telefono_1+'</small></h6>
+                <h6>Teléfono 2: <small>'+obj.telefono_2+'</small></h6>
+                <h6>Disponibilidad: <small>'+obj.disponibilidad+'</small></h6>
+                <h6>Dirección: <small>'+obj.direccion+'</small></h6>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm m-2 p-0 card shadow details box list-item '+obj.categoria+'">
+            <img class="card-img-top" src="http://www.entucarrito.com/assets/images/FOTOS/'+obj.nombre+'/1.jpg" alt="Card image" style="width:100%; object-fit: fit;">
+            <div class="card-body">
+              <h4 class="card-title">'+obj.nombre+'</h4>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Categoría: '+obj.categoria+'</span></h6>
+              <h6 class="text-muted"><span class="badge badge bg-light shadow-lg">Horario: '+obj.horario+'</span></h6>
+              <p class="card-text">'+obj.descripcion+'</p>
+              <a href="" class="text-light" data-toggle="collapse" data-target="#detalles">Mostrar/Ocultar detalles</a>
+                <div id="detalles'+obj.id_comercio+'" class="collapse detalles">
+                <hr>
+                <h6>Teléfono: <small>'+obj.telefono_1+'</small></h6>
+                <h6>Teléfono 2: <small>'+obj.telefono_2+'</small></h6>
+                <h6>Disponibilidad: <small>'+obj.disponibilidad+'</small></h6>
+                <h6>Dirección: <small>'+obj.direccion+'</small></h6>
+                </div>
+            </div>
+          </div>-->
+        </div>
+        <div class="row pb-4 pt-4 list-wrapper d-flex justify-content-center" id="prueba">
 
         </div>
 
       </div>
     </section>
-    <div id="page">
+    <div class="container" id="page">
 
     </div>
   </div>

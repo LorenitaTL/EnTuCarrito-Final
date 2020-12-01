@@ -4,8 +4,9 @@
 $lista = $categoriaModel->get();
 ?>
 
-<head><meta charset="gb18030">
-    
+<head>
+    <meta charset="gb18030">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>En Tu Carrito Jerez - Comercios</title>
     <link rel="stylesheet" href="<?= URL::to("assets/bootstrap/css/bootstrap.min.css") ?>" type="text/css" />
@@ -30,7 +31,7 @@ $lista = $categoriaModel->get();
                 <form id="formComercio" action="comercios/registrar" method="POST">
                     <div class="form-group">
                         <label for="nombre">Nombre (*):</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" required="required" />
+                        <input type="text" class="form-control" id="nombre" name="nombre" required="required" onkeyup="this.value = this.value.toUpperCase();" />
                     </div>
                     <div class="form-group">
                         <label for="direccion">Direccion (*):</label>
@@ -44,8 +45,8 @@ $lista = $categoriaModel->get();
                         <label for="categoria">Categoria:</label>
                         <select class="form-control" id="categoria" name="categoria">
                             <?php
-                            foreach ($lista as $key ) {
-                                echo '<option value="'.$key->nombre_categoria .'">'.$key->nombre_categoria .'</option>';
+                            foreach ($lista as $key) {
+                                echo '<option value="' . $key->nombre_categoria . '">' . $key->nombre_categoria . '</option>';
                             }
                             ?>
                         </select>
@@ -65,6 +66,47 @@ $lista = $categoriaModel->get();
                     <div class="form-group">
                         <label for="disponibilidad">Disponibilidad:</label>
                         <input type="text" class="form-control" id="disponibilidad" name="disponibilidad" />
+                    </div>
+
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto1" name="foto1" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto1')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto2" name="foto2" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto2')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto3" name="foto3" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto3')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto4" name="foto4" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto4')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto5" name="foto5" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto5')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto6" name="foto6" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto6')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto7" name="foto7" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto7')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto8" name="foto8" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto8')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto9" name="foto9" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto9')">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" class="form-control col-10 m-1" id="foto10" name="foto10" />
+                        <input type="button" value="Limpiar" class="col-1 btn btn-danger" onclick="setVal('#foto10')">
                     </div>
 
                     <div class="form-group text-right">
@@ -102,6 +144,13 @@ $lista = $categoriaModel->get();
             </div>
         </div>
     </div>
+
+    <script>
+        function setVal(idInput) {
+            $(idInput).val("")
+        }
+    </script>
+
 
 
     <script src="<?= URL::to("assets/plugins/jquery.js") ?>" type="text/javascript"></script>

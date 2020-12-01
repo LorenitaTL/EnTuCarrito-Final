@@ -13,7 +13,10 @@ var vista = {
     callbacks: {
         eventos: {
             accionesFormRegistro: {
+
                 ejecutar: function (evento) {
+
+                    send()
                     __app.detenerEvento(evento);
                     var form = vista.controles.formComercio;
                     var obj = form.getFormData();
@@ -22,7 +25,7 @@ var vista = {
                 }
             },
             accionesFormCategoria: {
-                ejecutar:function (evento) {
+                ejecutar: function (evento) {
                     __app.detenerEvento(evento)
                     var formCat = vista.controles.formCategoria
                     var objCat = formCat.getFormData()
@@ -44,10 +47,10 @@ var vista = {
                     vista.controles.formComercio.find('textarea').val('');
                     //swal('Correcto', 'Se ha registrado correctamente el comercio', 'success');
                     swal({ title: 'Correcto', text: 'Se ha registrado correctamente el comercio', type: "success" },
-                    function () {
-                        location.reload();
-                    }
-                );
+                        function () {
+                            location.reload();
+                        }
+                    );
                     return;
                 }
                 //swal('Error', respuesta.mensaje, 'error');
@@ -82,27 +85,49 @@ var vista = {
                     }
                 );
             },
-            
-            
+
+
         }
     },
     peticiones: {
         registrarComercio: function (obj) {
             __app.post(RUTAS_API.COMERCIOS.REGISTRAR_COMERCIO, obj)
-                    .beforeSend(vista.callbacks.peticiones.beforeSend)
-                    .complete(vista.callbacks.peticiones.completo)
-                    .success(vista.callbacks.peticiones.finalizado)
-                    .error(vista.callbacks.peticiones.finalizado)
-                    .send();
+                .beforeSend(vista.callbacks.peticiones.beforeSend)
+                .complete(vista.callbacks.peticiones.completo)
+                .success(vista.callbacks.peticiones.finalizado)
+                .error(vista.callbacks.peticiones.finalizado)
+                .send();
         },
-        registrarCategoria: function(obj){
+        registrarCategoria: function (obj) {
             __app.post(RUTAS_API.CATEGORIAS.REGISTRAR_CATEGORIA, obj)
-            .beforeSend(vista.callbacks.peticiones.beforeSendCat)
-            .complete(vista.callbacks.peticiones.completoCat)
-            .success(vista.callbacks.peticiones.finalizadoCat)
-            .error(vista.callbacks.peticiones.finalizadoCat)
-            .send()
+                .beforeSend(vista.callbacks.peticiones.beforeSendCat)
+                .complete(vista.callbacks.peticiones.completoCat)
+                .success(vista.callbacks.peticiones.finalizadoCat)
+                .error(vista.callbacks.peticiones.finalizadoCat)
+                .send()
         },
     },
 };
 $(vista.init);
+
+function send() {
+    var fd = new FormData(document.getElementById("formComercio"));
+    console.log("Datos")
+    for (var value of fd.values()) {
+        console.log(value);
+    }
+    var json = JSON.stringify(Object.fromEntries(fd))
+    console.log(json)
+    $.ajax({
+        url: 'http://localhost/EnTuCarrito-Final/app/http/controllers/UploadImages.php',
+        type: 'POST',
+        data: fd,
+        contentType: false,
+        cache: false,
+        processData: false,
+
+        /*success: function(response) {
+            $("#result").html(response);
+        }*/
+    });
+}
